@@ -11,3 +11,5 @@ parc = (vlcasa / nparc)
 percent = (vlsal * 30)/100
 print(f'O valor da casa é de R$ {vlcasa:.2f}\nE o período escolhido é de {qtanos:.0f} anos.'
       f'\nSeu salário é de R$ {vlsal:.2f}\nO valor das parcelas são R$ {parc:.2f}')
+if parc <= percent:
+    print('Meus parabéns! Seu empréstimo foi aprovado!')
