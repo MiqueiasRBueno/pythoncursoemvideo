@@ -1,4 +1,3 @@
-# Crie um script que leia o nome de uma pessoa e mostre uma mensagem de Boas-vindas segundo o valor digitado:
+# Crie um programa que escreva "Olá, Mundo!" na tela.
 
-nome = str(input('Qual seu nome? ')).strip()
-print(f'Olá {nome}!\nPrazer em te conhecer!')
+print('Olá, Mundo!')
