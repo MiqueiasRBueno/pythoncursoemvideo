@@ -13,3 +13,5 @@ print(f'O valor da casa é de R$ {vlcasa:.2f}\nE o período escolhido é de {qta
       f'\nSeu salário é de R$ {vlsal:.2f}\nO valor das parcelas são R$ {parc:.2f}')
 if parc <= percent:
     print('Meus parabéns! Seu empréstimo foi aprovado!')
+elif parc > percent:
+    print('O valor das parcelas ultrapassaram o limite de 30% do seu salário.\nSinto muito, seu empréstimo foi negado!')
