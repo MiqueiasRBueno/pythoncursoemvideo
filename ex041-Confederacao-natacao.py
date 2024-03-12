@@ -23,7 +23,7 @@ if ida_for <= 9:
     print(f'Você tem \033[1;34m{ida_for:.0f}\033[m ano(s), está na categoria \033[1;34mMIRIM\033[m.')
     print(f'Falta \033[1;34m{saldo:.0f}\033[m ano(s) para você entrar na categoria \033[1;34mINFANTIL\033[m.')
 elif 14 >= ida_for > 9:
-    saldo = 14 -1
+    saldo = 14 - 1
     print(f'Você tem \033[1;32m{ida_for:.0f}\033[m ano(s), está na categoria \033[1;32mINFANTIL\033[m.')
     print(f'Falta \033[1;32m{saldo:.0f}\033[m ano(s) para entrar na categoria \033[1;32mJUNIOR\033[m')
 elif 19 >= ida_for > 14:
@@ -31,7 +31,7 @@ elif 19 >= ida_for > 14:
     print(f'Você tem \033[31;1m{ida_for:.0f}\033[m ano(s), está na categoria \033[1;31mJUNIOR\033[m.')
     print(f'Falta \033[1;31m{saldo:.0f}\033[m ano(s) para entrar na categoria \033[1;31mSÊNIOR\033[m.')
 elif 25 >= ida_for > 19:
-    saldo = 25 -1
+    saldo = 25 - 1
     print(f'Você tem \033[1;33m{ida_for:.0f}\033[m ano(s), está na categoria \033[1;33mSÊNIOR\033[m.')
     print(f'Falta \033[1;33m{saldo:.0f}\033[m ano(s) para entrar na categoria \033[1;33mMASTER\033[m.')
 else:
