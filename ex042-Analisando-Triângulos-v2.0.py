@@ -18,7 +18,7 @@ if r1 < r2 + r3 and r2 < r3 + r1 and r3 < r1 + r2:
         print('O triângulo formado é \033[1;32mEQUILÁTERO\033[m!')
     elif r1 == r2 != r3 or r1 == r3 != r2 or r2 == r3 != r1:
         print('O triângulo formando é \033[1;32mISÓSCELES\033[m!')
-    else:
+    elif r1 != r2 != r3:
         print('O triângulo formado é \033[32;1mESCALENO\033[m!')
 else:
     print('Os segmentos acima NÃO PODEM FORMAR um triângulo!')
