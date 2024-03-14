@@ -13,16 +13,16 @@ altura = float(input('Qual a sua altura? '))
 imc = peso / (altura ** 2)
 if imc < 18.5:
     print(f'Seu imc atual é de {cor['verm']}{imc:.2f}{cor['fim']}')
-    print(f'Você está {cor['verm']}ABAIXO DO PESO{cor['fim']}!')
+    print(f'Você está {cor['verm']}ABAIXO DO PESO{cor['fim']}, {cor['verm']}cuidado!{cor['fim']}!')
 elif 25 > imc >= 18.5:
     print(f'Seu imc atual é de {cor['azul']}{imc:.2f}{cor['fim']}')
     print(f'Você está com peso {cor['azul']}IDEAL{cor['fim']}!')
 elif 30 > imc >= 25:
     print(f'Seu imc atual é de {cor['amar']}{imc:.2f}{cor['fim']}!')
-    print(f'Você está em {cor['amar']}SOBREPESO{cor['fim']}!')
+    print(f'Você está em {cor['amar']}SOBREPESO{cor['fim']}, {cor['verm']}cuidado!{cor['fim']}!')
 elif 40 > imc >= 30:
     print(f'Seu imc atual é de {cor['verm']}{imc:.2f}{cor['fim']}')
-    print(f'Você está {cor['verm']}OBESO{cor['fim']}!')
+    print(f'Você está em {cor['verm']}OBESIDADE{cor['fim']}, {cor['verm']}cuidado!{cor['fim']}!')
 else:
     print(f'Seu imc atual é de {cor['roxo']}{imc:.2f}{cor['fim']}')
-    print(f'Você corre risco de morte, está com {cor['roxo']}OBESIDADE MÓRBIDA{cor['fim']}!')
+    print(f'Você está em {cor['roxo']}OBESIDADE MÓRBIDA{cor['fim']}, {cor['verm']}cuidado!{cor['fim']}')
