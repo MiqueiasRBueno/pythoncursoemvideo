@@ -6,25 +6,26 @@ import datetime
 import math
 
 dia_nas = int(input('Que dia você nasceu? '))
-mes_nas = int(input('Em que mês você nasceu?'))
-ano_nas = int(input('E em qual ano você nasceu?'))
+mes_nas = int(input('Em que mês você nasceu? '))
+ano_nas = int(input('E em qual ano você nasceu? '))
+sexo = str(input('Qual é o sexo de nascimento, masc ou fem? '))
 dt = datetime.date.today()
 data_nascimento = datetime.date(ano_nas, mes_nas, dia_nas)
 diferenca = dt - data_nascimento
 dia = diferenca.days
 anos = dia / 365.25
 ida_for = math.floor(anos)
-if ida_for == 18:
+if ida_for == 18 and sexo == 'masc':
     print(f'Você completará \033[1;32m{ida_for}\033[m este ano.'
           f'\nEstá em período de alistamento militar.\n\033[1;40;7m'
           f' Procure o exército ou a junta militar da sua cidade,'
           f' entre 1° '
           'de janeiro e 30 de junho. \033[m')
-elif ida_for < 18:
+elif ida_for < 18 and sexo == 'masc':
     print(f'Você tem apenas \033[1;33m{ida_for}\033[m ainda não atingiu a idade para o alistamento militar.'
           f'\nAguarde até o ano que completa 18 anos e procure '
           'o\n\033[1;40;7m exército ou a junta militar de sua cidade, entre 1° de janeiro e 30 de junho. \033[m')
-else:
+elif ida_for > 18 and sexo == 'masc':
     print(f'Você tem \033[1;31m{ida_for}\033[m anos.'
           f'\nA idade máxima para o alistamento varia de acordo com a situação do cidadão:'
           f'\n\033[1;33m45 anos:\033[m Para brasileiros natos ou naturalizados que não tenham se alistado no ano em '
@@ -35,3 +36,5 @@ else:
           f'\n\033[1;33m24 anos:\033[m Para portadores de necessidades especiais.'
           f'\nSe você se enquadra em alguma das situações acima:\n\033[1;40;7m Compareça ao exército ou a junta militar'
           f' de sua cidade. \033[m')
+else:
+    print('\033[1;34mVocê está dispensada do alistamento militar!\nMuito obrigado!\033[m')
