@@ -26,21 +26,27 @@ if opcao == 1:
         print('EMPATE')
     elif selecao == 'TESOURA':
         print('Jogador GANHOU!')
-    else:
+    elif selecao == 'PAPEL':
         print('Computador GANHOU!')
+    else:
+        print('JOGADA INVÁLIDA!')
 elif opcao == 2:
     print('Você escolheu TESOURA')
     if selecao == 'TESOURA':
         print('EMPATE')
     elif selecao == 'PAPEL':
         print('Jogador GANHOU!')
-    else:
+    elif selecao == 'PEDRA':
         print('Computador GANHOU!')
+    else:
+        print('JOGADA INVÁLIDA!')
 elif opcao == 3:
     print('Você escolheu PAPEL')
     if selecao == 'PAPEL':
         print('EMPATE!')
     elif selecao == 'TESOURA':
         print('Computador GANHOU!')
-    else:
+    elif selecao == 'PEDRA':
         print('Jogador GANHOU!')
+    else:
+        print('JOGADA INVÁLIDA!')
