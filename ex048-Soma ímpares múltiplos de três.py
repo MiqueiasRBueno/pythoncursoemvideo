@@ -7,4 +7,4 @@ for c in range(1, 501, 2):
     if c % 3 == 0:
         soma += c
         cont += 1
-print('A soma de todos os {} valores solicitados é {}'.format(cont, soma))
+print('A soma de todos os \033[1;32m{}\033[m valores solicitados é \033[1;34m{}\033[m'.format(cont, soma))
