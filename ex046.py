@@ -1,5 +1,5 @@
 from time import sleep
-for c in range(10, -1, -1):
-    print(c)
+for cont in range(10, -1, -1):
+    print(cont)
     sleep(1)
-print('BUMM!, BUMM!, POWWW!')
+print('BUM!, BUM!, POOW!')
