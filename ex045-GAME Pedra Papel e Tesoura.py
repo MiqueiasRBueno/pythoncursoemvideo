@@ -23,7 +23,7 @@ print(f'O computador escolheu {selecao}')
 if opcao == 1:
     print('Você escolheu PEDRA')
     if selecao == 'PEDRA':
-        print('EMPATE')
+        print('EMPATE!')
     elif selecao == 'TESOURA':
         print('Jogador GANHOU!')
     else:
@@ -31,7 +31,7 @@ if opcao == 1:
 elif opcao == 2:
     print('Você escolheu TESOURA')
     if selecao == 'TESOURA':
-        print('EMPATE')
+        print('EMPATE!')
     elif selecao == 'PAPEL':
         print('Jogador GANHOU!')
     else:
