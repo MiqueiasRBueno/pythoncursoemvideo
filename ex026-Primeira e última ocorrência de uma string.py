@@ -3,6 +3,7 @@
 
 frase = str(input('Digite uma frase qualquer: ')).strip().upper()
 letra = str(input('Digite a letra que deseja analisar: ')).strip().upper()
-print('A letra {} aparece {} veze(s) na frase'.format(letra, frase.count(letra)))
-print('A primeira aparição da letra {} acontece em {}'.format(letra, frase.find(letra)+1))
-print('A sua última aparição é a {}'.format(frase.rfind(letra)+1))
+print('A letra \033[1;34{}\033[m aparece \033[1;34m{}\033[m veze(s) na frase'.format(letra, frase.count(letra)))
+print('A primeira aparição da letra \033[1;32m{}\033[m acontece em \033[1;32m{}\033[m'.format(letra,
+                                                                                              frase.find(letra)+1))
+print('A sua última aparição é a \033[1;32m{}\033[m'.format(frase.rfind(letra)+1))
