@@ -1,3 +1,5 @@
+# Faça um programa que leia um número inteiro e diga se ele é ou não um número primo.
+
 from time import sleep
 num = int(input('Digite um número inteiro: '))
 qtd = 0
