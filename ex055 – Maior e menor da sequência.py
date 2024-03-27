@@ -10,7 +10,7 @@ for c in range(1, 6):
     else:
         if peso > maior_peso:
             maior_peso = peso
-        elif peso < menor_peso:
+        if peso < menor_peso:
             menor_peso = peso
 print(f'O maior peso lido foi de \033[1;31m{maior_peso:.2f}\033[mkg')
 print(f'O menor peso lido foi \033[1;34m{menor_peso:.2f}\033[mkg')
