@@ -21,6 +21,6 @@ for p in range(1, 5):
         maior = idade
         old = nome
     media += idade / 4
-print(f'O homem mais velho do grupo se chama {old} e tem {maior} anos')
-print(f'A média de idade do grupo é de {media:.0f}')
-print(f'No grupo temos {mulheres} mulher(es) menor(es) de 20 anos.')
+print(f'O homem mais velho do grupo se chama \033[1;32m{old}\033[m e tem \033[1;33m{maior}\033[m anos')
+print(f'A média de idade do grupo é de \033[1;31m{media:.0f}\033[m anos.')
+print(f'No grupo temos \033[1;36m{mulheres}\033[m mulher(es) menor(es) de \033[1;31m20\033[m anos.')
