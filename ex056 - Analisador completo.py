@@ -6,12 +6,11 @@ mulheres = 0
 maior = 0
 old = ''
 for p in range(1, 5):
+    print(f'\033[1;32m------------------ {p}ª ------------------\033[m')
     nome = str(input(f'Digite o nome da {p}ª pessoa: ')).strip().title()
     idade = int(input(f'Digite a idade da {p}ª pessoa: '))
-    print('''Gênero
-    [ M ] (masculino) 
-    [ F ] (feminino)''')
-    sexo = str(input(f'Digite o gênero da {p}ª pessoa: ')).strip().upper()
+    sexo = str(input(f'Digite o gênero [M / F] da {p}ª pessoa: ')).strip().upper()
+    print(f'\033[1;32m----------------------------------------\033[m')
     if sexo == 'F':
         mulheres += idade < 20
     if p == 1 and sexo == 'M':
