@@ -9,7 +9,7 @@ if seg_1 + seg_2 > seg_3 and seg_1 + seg_3 > seg_2 and seg_2 + seg_3 > seg_1:
     print(f'Os segmentos digitados FORMAM um triângulo!')
     if seg_1 != seg_2 != seg_3 != seg_1:
         print(f'Temos um triângulo \033[1;31mESCALENO\033[m!')
-    if seg_1 == seg_2 == seg_3 == seg_1:
+    elif seg_1 == seg_2 == seg_3:
         print(f'Temos um triângulo \033[1;33mEQUILÁTERO\033[m!')
-    if seg_1 != seg_2 == seg_3 != seg_1:
+    else:
         print(f'Temos um triângulo \033[1;35mISÓSCELES\033[m!')
