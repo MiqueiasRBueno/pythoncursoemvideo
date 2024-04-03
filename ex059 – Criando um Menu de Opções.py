@@ -27,7 +27,7 @@ while not terminar:
             if seg_vl > pri_vl:
                 print(f'Entre {pri_vl} e {seg_vl} o número maior é {seg_vl}')
             else:
-                print(f'Entre {pri_vl} e {seg_vl} o número mairo é {pri_vl}')
+                print(f'Entre {pri_vl} e {seg_vl} o número maior é {pri_vl}')
         elif opcao == 4:
             pri_vl = int(input('Primeiro valor: '))
             seg_vl = int(input('Segundo valor: '))
