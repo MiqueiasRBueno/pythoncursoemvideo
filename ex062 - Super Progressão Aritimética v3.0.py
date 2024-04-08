@@ -15,4 +15,4 @@ while mais != 0:
         pa = termo + (n - 1) * razao
         print(pa, end='\033[1;31m ¬ \033[m')
     mais = int(input('\033[1;32mPAUSA\033[m\nQuantos termos você quer mostrar a mais? '))
-print('P.A. finalizada com \033[1;33m{}\033[m termos mostrados.'.format(soma))
+print('\033[1;31mP.A.\033[m finalizada com \033[1;33m{}\033[m termos mostrados.'.format(soma))
