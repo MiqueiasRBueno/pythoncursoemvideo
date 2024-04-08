@@ -3,10 +3,10 @@
 
 termo = int(input('Insira o primeiro termo de sua P.A.: '))
 razao = int(input('Insira a razão para sua P.A.: '))
-total = 0
-mais = 10
-soma = 0
-n = 0
+total = 0  # Será somado ao número de termo inicial com os termos adicionais
+mais = 10  # Número de termos da p.a inicial
+soma = 0   # somará a repetição + 1
+n = 0  # localização do termo da pa
 while mais != 0:
     total = total + mais
     while n != total:
