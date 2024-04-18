@@ -1,0 +1,10 @@
+n = int(input('Quantos termos? '))
+a, b = 0, 1
+print(f'{a} ¬ {b}', end=' ¬ ')
+count = 3
+while count <= n:
+    count += 1
+    c = a + b
+    a = b
+    b = c
+    print(c, end=' ¬ ')
