@@ -6,7 +6,4 @@ mult = 0
 while True:
     num = int(input('Quer ver a tabuada de qual valor? '))
     mult += 1
-    if mult < 11:
-        print(f'{num} X {mult} = {mult * num}')
-    if num == int:
-        break
+    print(f'{num} X {mult} = {mult * num}')
