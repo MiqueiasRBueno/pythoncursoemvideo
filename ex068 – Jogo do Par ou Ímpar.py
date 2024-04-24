@@ -15,10 +15,10 @@ while True:
     if par_impar == 'I' and par == 0:
         break
     if par_impar == 'P' and par == 0:
-        print(f'Você jogou {num} e o computador {pc}. Total de {num + pc} DEU PAR!')
+        print(f'Você jogou {num} e o computador {pc}. Total de {num + pc}, DEU PAR!')
         print('Você venceu!\nVamos jogar novamente...')
     elif par_impar == 'I' and par != 0:
-        print(f'Você jogou {num} e o computador {pc}. Total de {num + pc} DEU IMPAR!')
+        print(f'Você jogou {num} e o computador {pc}. Total de {num + pc}, DEU IMPAR!')
         print('Você venceu!\nVamos jogar novamente...')
     soma += 1
 print('-' * 40)
