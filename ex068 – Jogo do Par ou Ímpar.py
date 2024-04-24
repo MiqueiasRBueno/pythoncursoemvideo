@@ -7,7 +7,7 @@ soma = 0
 while True:
     print('-' * 40)
     num = int(input('Digite um valor: '))
-    pc = randint(0, 100)
+    pc = randint(0, 10)
     par_impar = str(input('Par ou Impar? [P/I] ')).upper().strip()
     par = (num + pc) % 2
     if par_impar == 'P' and par != 0:
