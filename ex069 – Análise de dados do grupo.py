@@ -17,6 +17,9 @@ while True:
     menores += ida <= 20
     if ct == 'N':
         break
-mul_men = menores - homens
-print(f'acabou! maiores de 18 = {maiores}, homens = {homens}, '
-      f'mulheres = {mulheres}, menores de 20 = {menores}, mulheres menores de 20 = {mul_men}')
+print(f'Total de pessoas maiores de 18 anos é: {maiores}')
+print(f'Total de homens cadastrados é de {homens}')
+if ida < 20 and sex == 'F':
+    print(f'O total de mulheres cadastradas com menos de 18 anos é de {menores - homens}')
+else:
+    print('Não temos mulheres menores de 20 anos cadastradas!')
