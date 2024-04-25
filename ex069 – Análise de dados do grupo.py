@@ -4,20 +4,19 @@
 # B) quantos homens foram cadastrados.
 # C) quantas mulheres tem menos de 20 anos.
 
-maiores = mulheres = 0
-homens = 0
+maiores = homens = mulheres = menores = 0
 while True:
-    print('-' * 40)
-    print('CADASTRE UM PESSOA')
-    print('-' * 40)
-    idade = int(input('Idade: '))
-    sexo = str(input('Sexo: [M/F] '))
-    conti = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
-    maiores += idade >= 18
-    homens += sexo == 'M'
-    if conti == 'N':
+    print('-*-' * 20)
+    print('CADASTRAMENTO DE PESSOAS')
+    ida = int(input('Idade: '))
+    sex = str(input('Sexo: [F/M] ')).upper().strip()[0]
+    ct = str(input('Quer continuar: [S/N] ')).upper().strip()[0]
+    maiores += ida >= 18
+    homens += sex.count('M')
+    mulheres += sex.count('F')
+    menores += ida <= 20
+    if ct == 'N':
         break
-
-print(f'Total de pessoas com mais de 18 anos: {maiores}')
-print(f'Temos {homens} homem(ns) cadastrados')
-print('A quantidade de mulheres menores de 20 anos:')
+mul_men = menores - homens
+print(f'acabou! maiores de 18 = {maiores}, homens = {homens}, '
+      f'mulheres = {mulheres}, menores de 20 = {menores}, mulheres menores de 20 = {mul_men}')
