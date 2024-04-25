@@ -19,7 +19,4 @@ while True:
         break
 print(f'Total de pessoas maiores de 18 anos é: {maiores}')
 print(f'Total de homens cadastrados é de {homens}')
-if ida < 20 and sex == 'F':
-    print(f'O total de mulheres cadastradas com menos de 18 anos é de {menores - homens}')
-else:
-    print('Não temos mulheres menores de 20 anos cadastradas!')
+print(f'O total de mulheres cadastradas com menos de 18 anos é de {menores}')
