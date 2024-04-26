@@ -9,8 +9,12 @@ while True:
     print('-*-' * 20)
     print('CADASTRAMENTO DE PESSOAS')
     ida = int(input('Idade: '))
-    sex = str(input('Sexo: [F/M] ')).upper().strip()[0]
-    ct = str(input('Quer continuar: [S/N] ')).upper().strip()[0]
+    sex = ' '
+    while sex not in 'FM':
+        sex = str(input('Sexo: [F/M] ')).upper().strip()[0]
+    ct = ' '
+    while ct not in 'SN':
+        ct = str(input('Quer continuar: [S/N] ')).upper().strip()[0]
     maiores += ida >= 18
     homens += sex.count('M')
     mulheres += sex.count('F')
