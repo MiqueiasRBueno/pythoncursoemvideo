@@ -29,3 +29,5 @@ while True:
         totalced = 0
         if total == 0:
             break
+    print('=' * 40)
+    print('Volte sempre ao BANCO PERDIDIMMM! Tenha um bom dia!')
