@@ -1,26 +1,12 @@
-# Crie um programa que simule o funcionamento de um caixa eletrônico. No início, pergunte ao usuário qual será o
-# valor a ser sacado (número inteiro) e o programa vai informar quantas cédulas de cada valor serão entregues. OBS:
-# considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
-
-valor = int(input('Digite o valor que deseja sacar: '))
-total = valor
-cedula = 50
-totalced = 0
-while True:
-    if total >= cedula:
-        total -= cedula
-        totalced += 1
-    else:
-        if totalced > 0:
-            print(f'Total de {totalced} cédulas de {cedula}')
-        elif cedula == 50:
-            cedula = 20
-        elif cedula == 20:
-            cedula = 10
-        elif cedula == 10:
-            cedula = 5
-        elif cedula == 5:
-            cedula = 2
-        totalced = 0
-        if total == 0:
-            break
+objetos = ('LÁPIS.............................R$\033[33m1,75\033[m',
+           'CADERNO..........................R$\033[33m32,00\033[m',
+           'ESTOJO............................R$\033[33m8,00\033[m',
+           'PAPEL ALMAÇO......................R$\033[33m5,46\033[m',
+           'BORRACHA..........................R$\033[33m3,45\033[m',
+           'CANETA............................R$\033[33m2,00\033[m')
+tabela = ('{:^48}'.format('\033[32;1mTABELA DE PREÇOS\033[m'))
+print('-' * 40)
+print(tabela)
+print('-' * 40)
+for ob in objetos:
+    print(ob)
