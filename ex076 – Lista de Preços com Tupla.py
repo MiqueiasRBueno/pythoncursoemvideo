@@ -11,7 +11,7 @@ print('{:^48}'.format('\033[34mTABELA DE PREÇOS\033[m'))
 print('-' * 40)
 for pos in range(0, len(lista)):
     if pos % 2 == 0:
-        print(f'{lista[pos]:.<27}', end='')
+        print(f'{lista[pos]:.<30}', end='')
     else:
         print(f'R$\033[31m{lista[pos]:>7.2f}\033[m')
 print('-' * 40)
