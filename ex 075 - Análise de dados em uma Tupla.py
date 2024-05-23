@@ -5,8 +5,10 @@
 
 num = (int(input('Digite um número: ')), int(input('Digite mais um número: ')),
        int(input('Digite outro número: ')), int(input('Digite mais outro número: ')))
-print(f'Você digitou os valores: {num}')
-print(f'O valor 9 apareceu {num.count(9)} vezes')
+print(f'Você digitou os valores: ', end='')
+for n1 in num:
+    print(n1, end=' ')
+print(f'\nO valor 9 apareceu {num.count(9)} vezes')
 if 3 in num:
     print(f'O primeiro valor 3 apareceu na {num.index(3) + 1}ª posição')
 else:
