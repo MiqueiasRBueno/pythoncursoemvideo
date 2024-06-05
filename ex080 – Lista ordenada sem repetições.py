@@ -5,9 +5,15 @@ lista = []
 for c in range(0, 5):
     num = int(input(f'Digite o {c + 1}º valor: '))
     if num not in lista:
-        if c == 0 or num > lista[-1]:
-            lista.append(num)
+        if c == 0:  # verifica se é o primeiro valor
+            lista.append(num)  # e insere o novo valor a lista
             print('Este valor vai para o final da lista...')
+        elif num > lista[-1]:  # verifica se é o maior valor da lista a partir do último elemento da lista
+            lista.append(num)  # e insere o o novo maior valor ao final da lista
+            print('Este valor vai para o final da lista...')
+    #   if c == 0 or num > lista[-1]: Forma simplificada do código acima
+        #   lista.append(num)
+        #   print('Este valor vai para o final da lista...')
         else:
             pos = 0
             while pos <= len(lista):
