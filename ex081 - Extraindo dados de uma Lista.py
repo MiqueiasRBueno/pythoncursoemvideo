@@ -18,3 +18,7 @@ while True:
         break
 print(f'Foram digitados {soma} números nessa lista.')
 print(f'Os valores digitados em ordem decrescente foram {lista}')
+if 5 in lista:
+    print('O valor 5 faz parte da lista!')
+else:
+    print('O valor 5 não esta presente na lista!')
