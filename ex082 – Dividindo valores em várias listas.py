@@ -14,11 +14,10 @@ while True:
         pares.append(num)
     if num % 2 != 0:
         impares.append(num)
-    parar = ' '
-    while parar not in 'SN':
-        parar = str(input('Deseja continuar? [S/N]\033[1;31m>\033[m')).upper().strip()[0]
-    if parar == 'N':
+    parar = str(input('Deseja continuar? [S/N]\033[1;31m>\033[m')).upper().strip()[0]
+    if parar in 'N':
         break
+print('-+-' * 25)
 print(f'Todos os valores digitados em nossa lista são:\033[1;31m>\033[m{lista}')
 print(f'Todos os valores pares digitados em nossa lista são:\033[1;31m>\033[m{pares}')
 print(f'Todos os valores impares digitados em nossa lista são:\033[1;31m>\033[m{impares}')
