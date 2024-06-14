@@ -3,13 +3,13 @@
 
 exp = str(input('Digite a expressão: '))
 pilha = []
-for simb in exp:  # para cada simbôlo na exp:
-    if simb == '(':  # se o simbôlo for um '(' abrindo
+for simb in exp:  # para cada simbolo na exp:
+    if simb == '(':  # se simbolo for um '(' abrindo
         pilha.append('(')  # então o programa colocará dentro da pilha
     elif simb == ')':  # se for um ")" fechando
-        if len(pilha) > 0:  # e len da pilha for menor que 0
+        if len(pilha) > 0:  # e len da pilha for maior que 0
             pilha.pop()  # removerá o último elemento na pilha
-        else:  # se for maior que zero
+        else:  # se for menor\ que zero
             pilha.append(')')  # colocará um ")" na pilha
             break
 if len(pilha) == 0:  # verifica se len de pilha é igual a zero, se for,
