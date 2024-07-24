@@ -15,5 +15,5 @@ while conti != 'N':
             maior = num
         if num < menor:
             menor = num
-print(f'Você digitou {cont} e a média entre eles é de {soma / cont}')
+print(f'Você digitou {cont} números e a média entre eles é de {soma / cont}')
 print(f'O maior valor foi {maior} e o menor foi {menor}')
