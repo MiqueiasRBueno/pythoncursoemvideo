@@ -4,36 +4,33 @@
 # B) Uma listagem com as pessoas mais pesadas.
 # C) Uma listagem com as pessoas mais leves.
 
-cadastro_temp = list()
-cadastro_princ = list()
+cad_pessoas_temp = []
+cad_pessoas_princ = []
 maior = menor = 0
 while True:
-    cadastro_temp.append(str(input('Nome: ')).title().strip())
-    cadastro_temp.append(float(input('Peso: ')))
-    if len(cadastro_princ) == 0:
-        maior = menor = cadastro_temp[1]
+    cad_pessoas_temp.append(str(input('Cadastre o nome: ')).title().upper().strip())
+    cad_pessoas_temp.append(float(input('Cadastre o peso: ')))
+    if len(cad_pessoas_princ) == 1:
+        maior = menor = cad_pessoas_temp[1]
     else:
-        if cadastro_temp[1] > maior:
-            maior = cadastro_temp[1]
-        if cadastro_temp[1] < menor:
-            menor = cadastro_temp[1]
-    cadastro_princ.append(cadastro_temp[:])
-    cadastro_temp.clear()
+        if cad_pessoas_temp[1] > maior:
+            maior = cad_pessoas_temp[1]
+        if cad_pessoas_temp[1] < menor:
+            menor = cad_pessoas_temp[1]
+    cad_pessoas_princ.append(cad_pessoas_temp[:])
+    cad_pessoas_temp.clear()
     parar = ' '
     while parar not in 'SN':
-        parar = str(input('Quer continuar? [S/N]: ')).title().strip()[0]
+        parar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
     if parar == 'N':
         break
-print('=*=' * 30)
-print(f'O número de pessoas cadastradas são {len(cadastro_princ)} pessoas.')
-print(f'O maior peso cadastrado é de {maior}kg. Peso de ', end=' ')
-for p in cadastro_princ:
+print(f'O total de pessoas cadastradas é de {len(cad_pessoas_princ)} pessoas.')
+print(f'O maior peso é de {maior:.2f}kg. O peso de: ', end=' ')
+for p in cad_pessoas_princ:
     if p[1] == maior:
         print(f'[{p[0]}]', end=' ')
 print()
-print(f'O menor peso cadastrado é de {menor}kg. Peso de ', end=' ')
-for p in cadastro_princ:
+print(f'O menor peso cadastrado é de {menor:.2f}kg. O peso de: ', end=' ')
+for p in cad_pessoas_princ:
     if p[1] == menor:
         print(f'[{p[0]}]', end=' ')
-print()
-print('=*=' * 30)
