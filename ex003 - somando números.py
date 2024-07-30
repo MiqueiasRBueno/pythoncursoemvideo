@@ -9,3 +9,4 @@ while True:
         parar = str(input('Deseja continuar? [S/N] ')).upper().strip()[0]
     if parar == 'N':
         break
+print('\033[32mOperação concluída com sucesso!\033[m')
