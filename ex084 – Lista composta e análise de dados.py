@@ -4,33 +4,33 @@
 # B) Uma listagem com as pessoas mais pesadas.
 # C) Uma listagem com as pessoas mais leves.
 
-cad_pessoas_temp = []
-cad_pessoas_princ = []
+cadastro_temp = []
+cadastro_princ = []
 maior = menor = 0
 while True:
-    cad_pessoas_temp.append(str(input('Cadastre o nome: ')).title().upper().strip())
-    cad_pessoas_temp.append(float(input('Cadastre o peso: ')))
-    if len(cad_pessoas_princ) == 1:
-        maior = menor = cad_pessoas_temp[1]
+    cadastro_temp.append(str(input('Cadastre o nome: ')).title().strip())
+    cadastro_temp.append(float(input('Cadastre o peso: ')))
+    if len(cadastro_princ) == 0:
+        maior = menor = cadastro_temp[1]
     else:
-        if cad_pessoas_temp[1] > maior:
-            maior = cad_pessoas_temp[1]
-        if cad_pessoas_temp[1] < menor:
-            menor = cad_pessoas_temp[1]
-    cad_pessoas_princ.append(cad_pessoas_temp[:])
-    cad_pessoas_temp.clear()
+        if cadastro_temp[1] > maior:
+            maior = cadastro_temp[1]
+        if cadastro_temp[1] < menor:
+            menor = cadastro_temp[1]
+    cadastro_princ.append(cadastro_temp[:])
+    cadastro_temp.clear()
     parar = ' '
     while parar not in 'SN':
-        parar = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
+        parar = str(input('Deseja continuar? [S/N]: ')).strip().upper()[0]
     if parar == 'N':
         break
-print(f'O total de pessoas cadastradas é de {len(cad_pessoas_princ)} pessoas.')
-print(f'O maior peso é de {maior:.2f}kg. O peso de: ', end=' ')
-for p in cad_pessoas_princ:
+print(f'O total cadastrados é de {len(cadastro_princ)} pessoas.')
+print(f'O maior peso cadastrado é de {maior}kg. Peso de ', end=' ')
+for p in cadastro_princ:
     if p[1] == maior:
         print(f'[{p[0]}]', end=' ')
 print()
-print(f'O menor peso cadastrado é de {menor:.2f}kg. O peso de: ', end=' ')
-for p in cad_pessoas_princ:
+print(f'O menor peso é de {menor}kg. Peso de ', end=' ')
+for p in cadastro_princ:
     if p[1] == menor:
         print(f'[{p[0]}]', end=' ')
