@@ -11,10 +11,9 @@ for i, v in enumerate(valores):
     if v == max(valores):
         print(f'\033[1;32m{i + 1}\033[m\033[1mª\033[m...', end='')
 print('posições')
-print()
 print(f'O menor valor digitado foi {min(valores)} na: ', end='')
 for i, v in enumerate(valores):
     if v == min(valores):
         print(f'\033[1;32m{i + 1}\033[m\033[1mª\033[m...', end='')
 print('posições')
-print()
+
