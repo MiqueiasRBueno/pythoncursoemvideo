@@ -2,11 +2,11 @@
 #  Caso o número já exista lá dentro, ele não será adicionado. No final,
 #  serão exibidos todos os valores únicos digitados, em ordem crescente.
 
-listavalores = list()
+lista_valores = list()
 while True:
     num = (int(input('Digite um valor: ')))
-    if num not in listavalores:
-        listavalores.append(num)
+    if num not in lista_valores:
+        lista_valores.append(num)
         print('Valor adicionado com sucesso...')
     else:
         print('Valor duplicado! Não vou adicionar...')
@@ -16,5 +16,5 @@ while True:
     if parar == 'N':
         break
 print('=-' * 30)
-listavalores.sort()
-print(f'Você digitou os valores {listavalores}')
+lista_valores.sort()
+print(f'Você digitou os valores {lista_valores}')
