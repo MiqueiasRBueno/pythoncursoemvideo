@@ -9,7 +9,7 @@ jogos = []
 print('\033[1;32m-=\033[m' * 30)
 print(' ' * 20, f'\033[1;33mJOGOS DA MEGA SENA\033[m')
 print('\033[1;32m-=\033[m' * 30)
-qtd = int(input('Quantos números deseja sortear? '))
+qtd = int(input('Quantos jogos deseja sortear? '))
 total = 1
 while total <= qtd:
     cont = 0

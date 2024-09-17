@@ -1,31 +1,25 @@
-from time import sleep
+# Faça um programa que leia 5 valores numéricos e guarde-os em uma lista. No final, mostre qual foi o maior e o
+# menor valor digitado e as suas respectivas posições na lista.
 
-ficha = []
-while True:
-    nome = str(input('Nome do aluno: ')).title().strip()
-    nota_1 = float(input('Nota 1: '))
-    nota_2 = float(input('Nota 2: '))
-    media = (nota_1 + nota_2) / 2
-    ficha.append([nome, [nota_1, nota_2], media])
-    parar = ' '
-    while parar not in 'SN':
-        parar = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
-    if parar == 'N':
-        break
-print('-=' * 30)
-print(f'{'N°':<4}{'NOME DO ALUNO':<10}{'MÉDIA':>8}')
-print('-' * 25)
-for i, a in enumerate(ficha):
-    print(f'{i:<4}{a[0]:<10}{media:>11.1f}')
-    print('-' * 25)
-while True:
-    aluno = int(input('Qual aluno deseja mostrar as notas? (999 interrompe): '))
-    if aluno == 999:
-        break
-    if aluno <= len(ficha) -1:
-        print(f'{'ALUNO':<10}{'NOTAS':>13}')
-        print('-' * 25)
-        print(f'{ficha[aluno][0]:<15}{ficha[aluno][1]}')
-        print('-' * 25)
-sleep(0.5)
-print('Finalizando...')
+lista_num = []
+maior = menor = 0
+for n in range(0,5):
+    lista_num.append(int(input(f'Digite um valor para {n + 1}ª posição : ')))
+    if n == 0:
+        maior = menor = lista_num[n]
+    else:
+        if lista_num[n] > maior:
+            maior = lista_num[n]
+        if lista_num[n] < menor:
+            menor = lista_num[n]
+print(f'Você digitou os valores: {lista_num}')
+print(f'Os maiores valores digitados foram {maior} nas posições: ', end=' ')
+for i, v in enumerate(lista_num):
+    if v == maior:
+        print(f'{i + 1}º...', end=' ')
+print()
+print(f'Os menores valores digitados foram {menor} nas posições: ', end=' ')
+for i, v in enumerate(lista_num):
+    if v == menor:
+        print(f'{i + 1}ª...', end=' ')
+print()
