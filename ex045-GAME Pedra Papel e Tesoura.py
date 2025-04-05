@@ -1,5 +1,5 @@
 # Crie um programa que faça o computador jogar Jokenpô com você.
-import random
+from random import choice
 from time import sleep
 print('\033[1;36m-)' * 5, '\033[m\033[1;32mPEDRA, PAPEL E TESOURA!\033[m', '\033[1;36m(-' * 5, '\033[m')
 print('\033[1;33m= ' * 23, '\033[m', '\033[1m')
