@@ -9,7 +9,7 @@ for c in range(0, 5):
             lista.append(num)  # e insere o novo valor a lista
             print('Este valor vai para o final da lista...')
         elif num > lista[-1]:  # verifica se é o maior valor da lista a partir do último elemento da lista
-            lista.append(num)  # e insere o o novo maior valor ao final da lista
+            lista.append(num)  # e insere o novo maior valor ao final da lista
             print('Este valor vai para o final da lista...')
     #   if c == 0 or num > lista[-1]: Forma simplificada do código acima
         #   lista.append(num)
