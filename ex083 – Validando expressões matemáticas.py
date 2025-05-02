@@ -11,7 +11,6 @@ for simb in exp:  # para cada simbolo na exp:
             pilha.pop()  # removerá o último elemento na pilha
         else:  # se for menor\ que zero
             pilha.append(')')  # colocará um ")" na pilha
-            break
 if len(pilha) == 0:  # verifica se len de pilha é igual a zero, se for,
     print('Sua expressão está correta!')  # a expressão estará correta
 else:
