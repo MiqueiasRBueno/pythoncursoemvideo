@@ -29,4 +29,4 @@ for coluna in range(0, 3):
     elif matriz[1][coluna] > maior:
         maior = matriz[1][coluna]
 print(f'O maior do Guanabara : {maior}')
-print('\033[1;32\033[m' * 30)
+print('\033[1;32m-=\033[m' * 30)
