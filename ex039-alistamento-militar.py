@@ -37,4 +37,4 @@ elif ida_for > 18 and sexo == 'masc':
           f'\nSe você se enquadra em alguma das situações acima:\n\033[1;40;7m Compareça ao exército ou a junta militar'
           f' de sua cidade. \033[m')
 else:
-    print('\033[1;34mVocê está dispensada do alistamento militar!\nMuito obrigado!\033[m')
+    print('\033[1;34mVocê está dispensado do alistamento militar!\nMuito obrigado!\033[m')
