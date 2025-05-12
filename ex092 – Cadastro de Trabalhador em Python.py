@@ -15,3 +15,4 @@ if cad_trabalho['CTPS'] != 0:
 print('\033[1;31m=\033[m' * 40)
 for k, v in cad_trabalho.items():
     print(f'- {k} tem o valor {v}')
+print('\033[1;31m=\033[m' * 40)
