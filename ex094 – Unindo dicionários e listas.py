@@ -8,19 +8,46 @@
 
 cad_pessoas_dicio = dict()
 cad_pessoas_lista = list()
+mulheres = list()
+m_idade = list()
+indices = media = soma = 0
 while True:
     cad_pessoas_dicio['Nome'] = str(input('Nome: ')).title().strip()
-    cad_pessoas_dicio['Sexo'] = str(input('Sexo [M/F]: ')).upper().strip()[0]
-    cad_pessoas_dicio['Idade'] = int(input('Idade: '))
+    sexo = ' '
+    while sexo not in 'MF':
+        cad_pessoas_dicio['Sexo'] = str(input('Sexo [M/F]: ')).upper().strip()[0]
+        if cad_pessoas_dicio['Sexo'] in 'F':
+            mulheres.append(cad_pessoas_dicio['Nome'])
+        sexo = cad_pessoas_dicio['Sexo']
+        if cad_pessoas_dicio['Sexo'] not in 'MF':
+            print('ERRO! Por favor, digite somente M ou F!')
+    if sexo == 'MF':
+        break
+    idade = int(input('Idade: '))
+    cad_pessoas_dicio['Idade'] = idade
+    media += idade / 2
     cad_pessoas_lista.append(cad_pessoas_dicio.copy())
     stop = ' '
     while stop not in 'SN':
         stop = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
+        if stop not in 'SN':
+            print('ERRO! Responda apenas S ou N.')
     if stop == 'N':
         break
 if len(cad_pessoas_lista) > 1:
-    print(f'Foram cadastradas {len(cad_pessoas_lista)} pessoas')
+    print(f'A) Foram cadastradas {len(cad_pessoas_lista)} pessoas')
 else:
-    print(f'Foi cadastrada {len(cad_pessoas_lista)} pessoa')
-print(cad_pessoas_dicio)
-print(cad_pessoas_lista)
+    print(f'A) Foi cadastrada {len(cad_pessoas_lista)} pessoa')
+print(f'B) A média de idade entre as pessoas cadastradas é de {media:.1f} anos')
+if len(mulheres) > 0:
+    if len(mulheres) > 1:
+        print(f'C) As mulheres cadastradas são: ', end=' ')
+    else:
+        print(f'C) A mulher cadastrada é: ', end=' ')
+    for m in mulheres:
+        print(m, end=' ')
+else:
+    print('C) Não temos mulheres cadastradas!')
+print()
+for n, i in enumerate(cad_pessoas_lista):
+    print(n)
