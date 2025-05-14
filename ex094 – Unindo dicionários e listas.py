@@ -9,9 +9,9 @@
 cad_pessoas_dicio = dict()
 cad_pessoas_lista = list()
 mulheres = list()
-m_idade = list()
 indices = media = soma = 0
 while True:
+    cad_pessoas_dicio.clear()
     cad_pessoas_dicio['Nome'] = str(input('Nome: ')).title().strip()
     sexo = ' '
     while sexo not in 'MF':
@@ -27,6 +27,7 @@ while True:
     cad_pessoas_dicio['Idade'] = idade
     media += idade / 2
     cad_pessoas_lista.append(cad_pessoas_dicio.copy())
+
     stop = ' '
     while stop not in 'SN':
         stop = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
@@ -49,5 +50,9 @@ if len(mulheres) > 0:
 else:
     print('C) Não temos mulheres cadastradas!')
 print()
-for n, i in enumerate(cad_pessoas_lista):
-    print(n)
+for p in cad_pessoas_lista:
+    if p['Idade'] >= media:
+        print(' ')
+        for k, v in p.itens():
+            print(f'{k} = {v}:', end=' ')
+        print()
