@@ -8,51 +8,38 @@
 
 cad_pessoas_dicio = dict()
 cad_pessoas_lista = list()
-mulheres = list()
 indices = media = soma = 0
 while True:
     cad_pessoas_dicio.clear()
     cad_pessoas_dicio['Nome'] = str(input('Nome: ')).title().strip()
-    sexo = ' '
-    while sexo not in 'MF':
+    while True:
         cad_pessoas_dicio['Sexo'] = str(input('Sexo [M/F]: ')).upper().strip()[0]
-        if cad_pessoas_dicio['Sexo'] in 'F':
-            mulheres.append(cad_pessoas_dicio['Nome'])
-        sexo = cad_pessoas_dicio['Sexo']
-        if cad_pessoas_dicio['Sexo'] not in 'MF':
-            print('ERRO! Por favor, digite somente M ou F!')
-    if sexo == 'MF':
-        break
-    idade = int(input('Idade: '))
-    cad_pessoas_dicio['Idade'] = idade
-    media += idade / 2
+        if cad_pessoas_dicio['Sexo'] in 'MF':
+            break
+        print('ERRO! Por favor, digite somente M ou F!')
+    cad_pessoas_dicio['Idade'] = int(input('Idade: '))
+    media += cad_pessoas_dicio['Idade']
     cad_pessoas_lista.append(cad_pessoas_dicio.copy())
-
-    stop = ' '
-    while stop not in 'SN':
+    while True:
         stop = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
-        if stop not in 'SN':
-            print('ERRO! Responda apenas S ou N.')
+        if stop in 'SN':
+            break
+        print('ERRO! Responda apenas S ou N.')
     if stop == 'N':
         break
 if len(cad_pessoas_lista) > 1:
     print(f'A) Foram cadastradas {len(cad_pessoas_lista)} pessoas')
 else:
     print(f'A) Foi cadastrada {len(cad_pessoas_lista)} pessoa')
-print(f'B) A média de idade entre as pessoas cadastradas é de {media:.1f} anos')
-if len(mulheres) > 0:
-    if len(mulheres) > 1:
-        print(f'C) As mulheres cadastradas são: ', end=' ')
-    else:
-        print(f'C) A mulher cadastrada é: ', end=' ')
-    for m in mulheres:
-        print(m, end=' ')
-else:
-    print('C) Não temos mulheres cadastradas!')
-print()
+print(f'B) A média de idade entre as pessoas cadastradas é de {media / len(cad_pessoas_lista):5.2f} anos')
+print(f'C) As mulheres cadastradas são: ', end=' ')
 for p in cad_pessoas_lista:
-    if p['Idade'] >= media:
-        print(' ')
-        for k, v in p.itens():
-            print(f'{k} = {v}:', end=' ')
+    if p['Sexo'] == 'F':
+        print(p['Nome'], end=' ')
+print()
+print(f'D) Pessoas cadastrada acima da média de idade:')
+for p in cad_pessoas_lista:
+    if p['Idade'] > media / len(cad_pessoas_lista):
+        for k, v in p.items():
+            print(f' {k} = {v}', end=' ')
         print()
