@@ -45,7 +45,7 @@ print()
 media = soma / len(cad_pessoas_lista)
 print('D) As pessoas cadastradas acima da média são:')
 for p in cad_pessoas_lista:
-    if p['Idade'] > media:
+    if p['Idade'] >= media:
         for k, v in p.items():
             print(f'{k} = {v} ;', end=' ')
 print()
