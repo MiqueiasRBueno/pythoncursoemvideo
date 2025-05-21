@@ -27,20 +27,19 @@ print(f'''\033[1;32m{'-=' * 25}\033[m
 \033[1;32m{'-' * 50}\033[m''')
 for i, p in enumerate(player_management_list):
     print(f' {i:<4}_ {p['Name']:<18}{f'{p['Goals']}':<11}{p['Total']:>10}')
+print(f'\033[32m{'-' * 50}\033[m')
 while True:
-    while True:
-        show_player_data = int(input('Mostrar dados de qual jogador e ou jogadora?: '))
-        player = show_player_data
-        if player == len(player_management_list) - 1:
-            break
+    show_player_data = int(input('Mostrar dados de qual jogador e ou jogadora?: '))
+    if show_player_data == 999:
+        break    
+    if show_player_data >= len(player_management_list):
         print('ERRO! Por favor, escolha um código do jogador na lista!')
-        if player <= len(player_management_list) - 1:
-            print(f'\033[32m{'-' * 50}\033[m')
-            print(f'__ Levantamento do jogador e ou jogadora \033[1;32m{player_management_list[player]["Name"]}\033[m: ')
-            part = 0
-            for g in player_management_list[player]["Goals"]:
-                print(f'Na {1 + part}ª partida \033[1;32m{player_management_list[player]["Name"]}\033[m fez \033[32m{g}'
-                      f'\033[m gols')
-                part += 1
-    if player== 999:
-        break
+    else:
+        print(f'__ Levantamento do jogador e ou jogadora \033[1;32m{player_management_list[show_player_data]
+        ["Name"]}\033[m: ')
+        part = 0
+        for g in player_management_list[show_player_data]["Goals"]:
+            print(f'Na {1 + part}ª partida \033[1;32m{player_management_list[show_player_data]["Name"]
+            }\033[m fez \033[32m{g}'
+                  f'\033[m gols')
+            part += 1
