@@ -22,12 +22,12 @@ while True:
         print('ERRO! Digite S ou N: ')
     if stop in 'N':
         break
-print(f'''\033[1;32m{'-=' * 25}\033[m
+print(f'''\033[1;32m{'-=' * 27}\033[m
 {'Cod':<5}_ {'Nome':<20}{'Gols':<15}{'Total':>8}
 \033[1;32m{'-' * 50}\033[m''')
 for i, p in enumerate(player_management_list):
     print(f' {i:<4}_ {p['Name']:<18}{f'{p['Goals']}':<11}{p['Total']:>10}')
-print(f'\033[32m{'-' * 50}\033[m')
+print(f'\033[32m{'-' * 54}\033[m')
 while True:
     show_player_data = int(input('Mostrar dados de qual jogador e ou jogadora?: '))
     if show_player_data == 999:
@@ -43,3 +43,5 @@ while True:
             }\033[m fez \033[32m{g}'
                   f'\033[m gols')
             part += 1
+    print(f'\033[1;32m-\033[m' * 54)
+print(f'{"\033[32m<<\033[mVolte Sempre!\033[1;32m>>\033[m":^70}')
