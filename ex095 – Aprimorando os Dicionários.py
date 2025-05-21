@@ -39,9 +39,10 @@ while True:
         ["Name"]}\033[m: ')
         part = 0
         for g in player_management_list[show_player_data]["Goals"]:
-            print(f'Na {1 + part}ª partida \033[1;32m{player_management_list[show_player_data]["Name"]
+            print(f'\t\tNa {1 + part}ª partida \033[1;32m{player_management_list[show_player_data]["Name"]
             }\033[m fez \033[32m{g}'
                   f'\033[m gols')
+            print(f'\tTotal de {player_management_list[show_player_data]["Total"]} gols')
             part += 1
     print(f'\033[1;32m-\033[m' * 54)
 print(f'{"\033[32m<<\033[mVolte Sempre!\033[1;32m>>\033[m":^70}')
