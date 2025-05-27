@@ -24,7 +24,6 @@ _O maior valor digitado é 0.''')
 _O maior valor digitado é {max(num)}.''')
 
 
-
 maior(1,4,7,8,0,3,2,90)
 maior(2,4,6,8,0,7,5,3,755)
 maior()
