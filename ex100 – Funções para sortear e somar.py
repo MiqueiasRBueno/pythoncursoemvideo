@@ -23,19 +23,15 @@ Sorteando os 5 valores :''', end='')
     print('PRONTO!')
 
 # Função para somar números pares em uma lista:
-def somapar(lista):
+def somaPar(lista):
+    print(f'Com a soma dos valores pares {lista}, temos ', end=' ')
     soma = pares = 0
-    print(f'Com a soma dos valores pares ', end=' ')
     for value in lista:
         if value % 2 == 0:
-            pares = value
             soma += value
-            print(pares, end=' ')
-            print(',', end=' ')
-    print('temos', end=' ')
     print(soma)
 
 
 # Programa Principal:
 sorteia(numeros)
-somapar(numeros)
+somaPar(numeros)
