@@ -37,4 +37,5 @@ def somapar(lista):
 
 # Programa Principal:
 sorteia(numeros)
+sleep(0.3)
 somapar(numeros)
