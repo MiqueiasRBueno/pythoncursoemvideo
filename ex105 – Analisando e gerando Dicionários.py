@@ -6,11 +6,15 @@
 # – A média da turma
 # – A situação (opcional)
 
-# dicionário
-resp = {}
-
 # Função
-def notas(*num, show=False):
+def notas(*num, situ=False):
+    """
+    — > A função notas é um programa para adicionar a nota de vários alunos
+    :param num: recebe os números adicionados
+    :param situ: se verdadeiro mostra a situação da média das notas da classe
+    :return: retorna um dicionário com os dados adicionados
+    """
+    resp = {}
     total = 0
     for _ in num:
         total += 1
@@ -20,16 +24,16 @@ def notas(*num, show=False):
         soma = sum(num)
         media = soma / len(num)
         resp['Média'] = media
-        if show:
+        if situ:
             if media < 5:
                 resp['Situação'] = 'Ruim!'
             elif media < 7:
-                resp['Situação'] = 'Boa!'
+                resp['Situação'] = 'Razoável!'
             else:
-                resp['Situação'] = 'Ótima!'
+                resp['Situação'] = 'Boa!'
     return resp
 
 
 # Programa principal:
-resp = notas(7, 5, 6, 10, 9, show=True)
-print(resp)
+resposta = notas(7.5, 5.5, 6, 10, 9, situ=True)
+print(resposta)
