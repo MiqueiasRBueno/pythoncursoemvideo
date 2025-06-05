@@ -11,11 +11,12 @@ def interHelp():
     :return:
     """
     from time import sleep
-    print(f'''\033[1;42m{"=" * 40}
+
+    while True:
+        print(f'''\033[1;42m{"=" * 40}
 {"SISTEMA DE AJUDA PYTHON":^40}
 {"=" * 40}
 \033[m''', end='')
-    while True:
         ajuda = str(input('Função ou Biblioteca>> '))
         if ajuda in 'fim':
             break
