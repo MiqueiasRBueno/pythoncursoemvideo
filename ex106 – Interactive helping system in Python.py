@@ -3,7 +3,7 @@
 # Quando o usuário digitar a palavra ‘FIM’, o programa se encerrará. Importante: use cores.
 
 #Função:
-def interHelp(txt):
+def interHelp():
     from time import sleep
     while True:
         print(f'''\033[1;32;40m{"." * 45}
@@ -11,7 +11,7 @@ def interHelp(txt):
 {"." * 45}
 \033[m''', end='')
         sleep(0.5)
-        hp = str(input(txt))
+        hp = str(input('Função ou Biblioteca>> '))
         if hp in 'fim':
             print(print(f'''\033[1;31;7m{"." * 45}
 {"ATÉ LOGO!":^45}
@@ -20,7 +20,7 @@ def interHelp(txt):
             break
         sleep(0.5)
         print(f'''\033[1;33;7m{"." * 45}
-    {"ACESSANDO DOCUMENTAÇÃO DO COMANDO":^45}
+{f"ACESSANDO DOCUMENTAÇÃO DO COMANDO '{hp}'":^45}
 {"." * 45}
 \033[m\033[7m''')
         sleep(0.5)
@@ -29,5 +29,4 @@ def interHelp(txt):
 
 
 #Programa principal:
-ajuda = interHelp('Função ou Biblioteca> ')
-print(ajuda)
+interHelp()
