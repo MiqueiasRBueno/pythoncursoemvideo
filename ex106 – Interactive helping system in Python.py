@@ -4,29 +4,31 @@
 
 #Função:
 def interHelp():
+    """
+    — > Um mini-sistema que utilize o Interactive Help do Python.
+    O usuário vai digitar o comando e o manual vai aparecer.
+    Quando o usuário digitar a palavra ‘FIM’, o programa se encerrará.
+    :return:
+    """
     from time import sleep
-    while True:
-        print(f'''\033[1;32;40m{"." * 45}
-{"SISTEMA DE AJUDA PYTHON HELP":^45}
-{"." * 45}
+    print(f'''\033[1;42m{"=" * 40}
+{"SISTEMA DE AJUDA PYTHON":^40}
+{"=" * 40}
 \033[m''', end='')
-        sleep(0.5)
-        hp = str(input('Função ou Biblioteca>> '))
-        if hp in 'fim':
-            print(print(f'''\033[1;31;7m{"." * 45}
-{"ATÉ LOGO!":^45}
-{"." * 45}
-\033[m'''))
+    while True:
+        ajuda = str(input('Função ou Biblioteca>> '))
+        if ajuda in 'fim':
             break
-        sleep(0.5)
-        print(f'''\033[1;33;7m{"." * 45}
-{f"ACESSANDO DOCUMENTAÇÃO DO COMANDO '{hp}'":^45}
-{"." * 45}
-\033[m\033[7m''')
-        sleep(0.5)
-        help(hp)
-    return hp
-
+        print(f'''\033[1;43m{"=" * 40}
+{f"ACESSANDO DOCUMENTAÇÃO DE '{ajuda}'":^40}
+{"=" * 40}
+\033[m\033[40;7m''', end='')
+        help(ajuda)
+        print('\033[m', end='')
+    print(f'''\033[1;41m{"=" * 40}
+{"ATÉ LOGO!":^40}
+{"=" * 40}
+\033[m''')
 
 #Programa principal:
 interHelp()
