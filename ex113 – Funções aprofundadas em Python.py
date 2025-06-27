@@ -8,18 +8,17 @@ def leiaInt(msg):
     :param msg: Dados a serem validados
     :return: Dados validados
     """
-    ok = False
-    valor = 0
     while True:
-        num = str(input(msg)).strip()
         try:
-            valor = int(num)
-            ok = True
+            num = int(input(msg))
         except (ValueError, TypeError):
             print(f'\033[31mERRO! Por favor, digite um valor válido:\033[m ')
-        if ok:
-            break
-    return valor
+            continue
+        except KeyboardInterrupt:
+            print('O usuário preferiu não digitar esse valor!')
+            return 0
+        else:
+            return num
 
 def leiaFloat(msg):
     """
@@ -27,18 +26,17 @@ def leiaFloat(msg):
     :param msg: Dados a serem validados
     :return: Dados validados
     """
-    ok = False
-    valor = 0
     while True:
-        num = str(input(msg)).strip().replace(',', '.')
         try:
-            valor = float(num)
-            ok = True
+            num = float(input(msg))
         except (ValueError, TypeError):
-            print('\033[31mERRO! Por favor, digite um número real valido!\033[m')
-        if ok:
-            break
-    return valor
+            print('\033[31mERRO! Por favor, digite um valor válido!\033[m')
+            continue
+        except KeyboardInterrupt:
+            print('O usuário preferiu não digitar esse valor!')
+            return 0
+        else:
+            return num
 
 
 inteiro = leiaInt('Digite um número inteiro: ')
