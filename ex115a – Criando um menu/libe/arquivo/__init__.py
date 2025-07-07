@@ -1,3 +1,6 @@
+from io import TextIOWrapper
+from typing import Any, IO
+
 from libe.interface import *
 
 def arquivoExiste(nome):
