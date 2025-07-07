@@ -1,9 +1,15 @@
-from lib.interface import *
+from libe.interface import *
+from libe.arquivo import *
+
+arq = 'cursoemvideo.txt'
+
+if not arquivoExiste(arq):
+    criarArquivo(arq)
 
 while True:
     resposta = menu(['Ver Pessoas Cadastradas', 'Cadastrar Pessoas', 'Sair Do Programa'])
     if resposta == 1:
-        cabecalho('opção 1')
+        lerArquivo(arq)
     elif resposta == 2:
         cabecalho('opção 2')
     elif resposta == 3:
