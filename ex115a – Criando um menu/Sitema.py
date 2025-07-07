@@ -11,7 +11,8 @@ while True:
     if resposta == 1:
         lerArquivo(arq)
     elif resposta == 2:
-        cabecalho('opção 2')
+        cabecalho('Novo Cadastro')
+        cadastrar_usuario(arq, name=str(input('Nome: ')), idade=int(input('Idade: ')))
     elif resposta == 3:
         cabecalho('Saindo do programa!')
         break
